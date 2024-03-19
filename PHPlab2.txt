@@ -1,0 +1,22 @@
+<?php
+$string_literal_concatenation ="Hello"."world!";
+$string_variable1="Hello";
+$string_variable2="world!";
+$variable_concatenation=$string_variable1.$string_variable2;
+$string_literal_variable_concatenation="Concatenating".
+$string_variable1."multiple"."strings.";
+$string_with_single_quotes = "I'm using single quotes inside this string.";
+$variable_with_single_quotes='This variable contains a single quote:'.$string_variable1;
+$html_string ='<div class="container">'.'<pid="paragraph">This is an HTML string.</p>'.'</div>';
+echo"(i) Strings represented with literals:\n";
+echo $string_literal_concatenation . "\n\n";
+echo"(ii) Strings as variables:\n";
+echo $variable_concatenation . "\n\n";
+echo"(iii) Multiple strings represented with literals and variables:\n";
+echo $string_literal_variable_concatenation . "\n\n";
+echo"(iv) Strings and string variables containing single quotes:\n";
+echo $string_with_single_quotes . "\n";
+echo $variable_with_single_quotes . "\n\n";
+echo"(v) Strings containing HTML segments:\n";
+echo $html_string . "\n";
+?>

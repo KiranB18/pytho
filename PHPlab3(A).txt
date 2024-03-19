@@ -1,0 +1,32 @@
+<?php
+function checkOddEven($number) {
+if ($number % 2 == 0) {
+echo "$number is even.\n";
+} else {
+echo "$number is odd.\n";
+}
+}
+function checkDivisibility($number, $divisor) {
+if ($number % $divisor == 0) {
+echo "$number is divisible by $divisor.\n";
+} else {
+echo "$number is not divisible by $divisor.\n";
+}
+}
+
+
+function checkSquare($number, $base) {
+$square = $base * $base;
+if ($number == $square) {
+echo "$number is the square of $base.\n";
+} else {
+echo "$number is not the square of $base.\n";
+}
+}
+$givenNumber = readline("Enter the number:");
+$divisor = readline("Enter the divisor:");
+$baseNumber = readline("Enter the basenumber:");
+checkOddEven($givenNumber);
+checkDivisibility($givenNumber, $divisor);
+checkSquare($givenNumber, $baseNumber);
+?>

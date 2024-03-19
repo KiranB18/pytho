@@ -1,0 +1,30 @@
+<?php
+class Employee {
+public $Emp_Name;
+public $Emp_ID;
+public $Emp_Dept;
+public $Emp_Salary;
+public $Emp_DOJ;
+public function __construct($name, $id, $dept, $salary, $doj) {
+$this->Emp_Name = $name;
+$this->Emp_ID = $id;
+$this->Emp_Dept = $dept;
+$this->Emp_Salary = $salary;
+$this->Emp_DOJ = $doj;
+}
+public function displayEmployeeDetails() {
+echo "Employee Name: " . $this->Emp_Name . "\n";
+echo "Employee ID: " . $this->Emp_ID ."\n";
+echo "Employee Department: " . $this->Emp_Dept . "\n";
+echo "Employee Salary: " . $this->Emp_Salary . "\n";
+echo "Employee Date of Joining: " . $this->Emp_DOJ . "\n";
+}
+}
+$employee1 = new Employee("John Doe", "E001", "IT", 50000, "2022-01-01");
+$employee2 = new Employee("Jane Smith", "E002", "HR", 45000, "2022-02-15");
+echo "Employee 1 Details:\n";
+$employee1->displayEmployeeDetails();
+echo "\t";
+echo "Employee 2 Details:\n";
+$employee2->displayEmployeeDetails();
+?>

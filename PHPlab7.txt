@@ -1,0 +1,32 @@
+<?php
+function printFirstNLines($filename, $n) {
+$file = fopen($filename, "r");
+if ($file) {
+$lineNumber = 0;
+while (($line = fgets($file)) !== false && $lineNumber < $n) {
+echo $line;
+$lineNumber++;
+}
+fclose($file);
+} else {
+echo "Error opening file: $filename";
+}
+}
+function updateFileContent($filename, $content) {
+$file = fopen($filename, "a"); // Open the file in append mode
+if ($file) {
+fwrite($file, $content);
+fclose($file);
+echo "Content updated/added successfully!";
+} else {
+echo "Error opening file: $filename";
+}
+}
+$filename = "example.txt";
+$N = 5; 
+echo "Printing the first $N lines of the file:\n";
+printFirstNLines($filename, $N);
+$newContent = "\nNew content to be added to the file.";
+echo "\n\nUpdating/add content to the file:\n";
+updateFileContent($filename, $newContent);
+?>

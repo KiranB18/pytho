@@ -1,0 +1,23 @@
+<?php
+function calculateRoots($a, $b, $c){
+$discriminant = $b * $b - 4 * $a * $c;
+if ($discriminant >= 0) {
+$root1 = (-$b + sqrt($discriminant)) / (2 * $a);
+$root2 = (-$b - sqrt($discriminant)) / (2 * $a);
+echo "Root 1: $root1\n";
+echo "Root 2: $root2\n";
+} else {
+$realPart=-$b/(2*$a);
+$imaginaryPart = sqrt(abs($discriminant)) / (2 * $a);
+echo "Root 1: $realPart + $imaginaryPart i\n";
+echo "Root 2: $realPart - $imaginaryPart i\n";
+}
+}
+echo "Enter coefficient a: ";
+$a = floatval(readline());
+echo "Enter coefficient b: ";
+$b = floatval(readline());
+echo "Enter coefficient c: ";
+$c = floatval(readline());
+calculateRoots($a, $b, $c);
+?>

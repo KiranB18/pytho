@@ -1,0 +1,19 @@
+<?php
+function calculateWordFrequency($filename, $searchWord) {
+$fileContent = file_get_contents($filename);
+if ($fileContent !== false) {
+$wordCount = substr_count($fileContent, $searchWord);
+return $wordCount;
+} else {
+return -1; 
+}
+}
+$filename = "example.txt";
+$searchWord = readline("Enter the word to find its frequency in the file: ");
+$wordFrequency = calculateWordFrequency($filename, $searchWord);
+if ($wordFrequency !== -1) {
+echo "The word '$searchWord' occurs $wordFrequency times in the file.\n";
+} else {
+echo "Error reading the file: $filename\n";
+}
+?>

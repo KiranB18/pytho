@@ -1,0 +1,9 @@
+<?php
+$p = readline("Enter the Principal amount: ");
+$R = readline("Enter the Annual nominal interest rate as a percent: ");
+$t = readline("Enter the time in decimal years: ");
+$n = readline("Enter the number of times the interest is compounded: ");
+$r = $R / 100;
+$ci = $p * pow((1 + ($r / $n)), $n * $t);
+echo "Compound Interest = $ci";
+?>

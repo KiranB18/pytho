@@ -1,0 +1,11 @@
+<?php
+$base = 10;
+$height = 15;
+echo "area with base $base and height $height= ".($base*$height)/2;
+?>
+
+<?php
+$length = 14;
+$width = 12;
+echo "area of rectangle is $length*$width=".($length*$width)."<br/>";
+?>

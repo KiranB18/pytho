@@ -1,0 +1,11 @@
+<?php
+function countAadhaarOccurrences($text) {
+$pattern = '/\b\d{4}\s?\d{4}\s?\d{4}\b/';
+preg_match_all($pattern, $text, $matches);
+$count = count($matches[0]);
+return $count;
+}
+$text = "The Aadhaar numbers are 1234 5678 9012 and 9876 5432 1098.";
+$result = countAadhaarOccurrences($text);
+echo "Number of Aadhaar occurrences: " . $result;
+?>

@@ -1,0 +1,22 @@
+<?php
+function calculateMean($numbers) {
+$sum = array_sum($numbers);
+$count = count($numbers);
+return $sum / $count;
+}
+function calculateStandardDeviation($numbers) {
+$mean = calculateMean($numbers);
+$sumSquaredDiff = 0;
+foreach ($numbers as $number) {
+$sumSquaredDiff += pow($number - $mean, 2);
+}
+$variance = $sumSquaredDiff / count($numbers);
+return sqrt($variance);
+}
+$numbers = [5, 8, 12, 15, 20];
+$mean = calculateMean($numbers);
+$stdDeviation = calculateStandardDeviation($numbers);
+echo "Numbers: " . implode(', ', $numbers) . "\n";
+echo "Mean: $mean\n";
+echo "Standard Deviation: $stdDeviation\n";
+?>

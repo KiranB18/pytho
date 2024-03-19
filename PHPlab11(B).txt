@@ -1,0 +1,12 @@
+<?php
+function replacePattern($text, $pattern, $replacement) {
+$result = preg_replace($pattern, $replacement, $text);
+return $result;
+}
+$text = "The quick brown fox jumps over the lazy dog.";
+$pattern = '/quick brown/';
+$replacement = 'swift black';
+$result = replacePattern($text, $pattern, $replacement);
+echo "Original text: " . $text . "<br>";
+echo "Modified text: " . $result;
+?>

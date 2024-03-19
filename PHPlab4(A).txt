@@ -1,0 +1,14 @@
+<?php
+function newtonSquareRoot($number, $guess = null, $epsilon = 1e-10) {
+if ($guess === null) {
+$guess = $number / 2;
+}
+while (abs($guess * $guess - $number) > $epsilon) {
+$guess = 0.5 * ($guess + $number / $guess);
+}
+return $guess;
+} 
+$number = 25; 
+$result = newtonSquareRoot($number);
+echo "The square root of $number is approximately: $result\n";
+?>
